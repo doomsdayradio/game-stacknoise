@@ -1,0 +1,324 @@
+.insider-page {
+  background:
+    radial-gradient(circle at 15% 0%, rgba(246, 184, 74, 0.16), transparent 28%),
+    radial-gradient(circle at 82% 16%, rgba(124, 255, 208, 0.12), transparent 24%),
+    linear-gradient(180deg, #040807, #07110d 38%, #050b08);
+}
+
+.insider-shell {
+  position: relative;
+  z-index: 1;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 24px 18px 42px;
+}
+
+.insider-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 28px;
+  margin-bottom: 18px;
+  background:
+    linear-gradient(135deg, rgba(246, 184, 74, 0.08), transparent 38%),
+    radial-gradient(circle at top right, rgba(124, 255, 208, 0.08), transparent 28%),
+    linear-gradient(155deg, rgba(13, 29, 24, 0.96), rgba(8, 17, 14, 0.98));
+}
+
+.insider-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 5px);
+  pointer-events: none;
+}
+
+.insider-back,
+.insider-source-link {
+  display: inline-flex;
+  align-items: center;
+  color: #f4c56d;
+  font-family: "Space Mono", monospace;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.insider-back:hover,
+.insider-source-link:hover {
+  color: #fff0b8;
+}
+
+.insider-kicker,
+.insider-panel-kicker,
+.insider-card-kicker,
+.insider-section-kicker {
+  margin: 0;
+  font-family: "Space Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8db7a8;
+}
+
+.insider-kicker {
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.insider-title {
+  margin: 0;
+  max-width: 10ch;
+  font-family: "Space Mono", monospace;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: #f5f0d8;
+}
+
+.insider-subtitle {
+  margin: 14px 0 0;
+  max-width: 760px;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  color: #c0d1c9;
+}
+
+.insider-highlight-row {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.insider-highlight {
+  padding: 16px 18px;
+  background: linear-gradient(180deg, rgba(16, 29, 24, 0.92), rgba(9, 15, 13, 0.92));
+}
+
+.insider-highlight-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-family: "Space Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f3bc55;
+}
+
+.insider-highlight-copy {
+  margin: 0;
+  color: #dce7df;
+  line-height: 1.5;
+}
+
+.insider-layout {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.insider-sidebar {
+  position: sticky;
+  top: 18px;
+  display: grid;
+  gap: 18px;
+}
+
+.insider-panel {
+  padding: 18px;
+}
+
+.insider-map {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.insider-map li {
+  position: relative;
+  padding: 10px 12px 10px 34px;
+  border: 1px solid rgba(100, 138, 126, 0.28);
+  border-radius: 12px;
+  background: rgba(5, 10, 8, 0.32);
+  color: #dce7df;
+  line-height: 1.35;
+}
+
+.insider-map li::before {
+  content: attr(data-step);
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: rgba(246, 184, 74, 0.18);
+  color: #f3bc55;
+  font: 700 0.7rem/18px "Space Mono", monospace;
+  text-align: center;
+}
+
+.insider-main {
+  display: grid;
+  gap: 18px;
+}
+
+.insider-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.insider-card {
+  padding: 18px;
+  background:
+    radial-gradient(circle at top right, rgba(246, 184, 74, 0.08), transparent 34%),
+    linear-gradient(180deg, rgba(18, 33, 28, 0.96), rgba(10, 17, 14, 0.96));
+}
+
+.insider-card h2 {
+  margin: 10px 0 8px;
+  font-family: "Space Mono", monospace;
+  font-size: 1.05rem;
+  color: #f1f5ee;
+}
+
+.insider-card p {
+  margin: 0;
+  color: #dce7df;
+  line-height: 1.48;
+}
+
+.insider-sections {
+  display: grid;
+  gap: 18px;
+}
+
+.insider-section {
+  padding: 20px;
+}
+
+.insider-section-header {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.insider-section-header h2 {
+  margin: 0;
+  font-family: "Space Mono", monospace;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  color: #f3f5ef;
+}
+
+.insider-section-intro {
+  margin: 0;
+  max-width: 75ch;
+  color: #c8d7cf;
+  line-height: 1.55;
+}
+
+.insider-section-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(240px, 0.9fr);
+  gap: 16px;
+}
+
+.insider-copy {
+  display: grid;
+  gap: 12px;
+}
+
+.insider-copy p {
+  margin: 0;
+  color: #dfe9e2;
+  line-height: 1.58;
+}
+
+.insider-detail {
+  padding: 16px;
+  border: 1px solid rgba(100, 138, 126, 0.28);
+  border-radius: 14px;
+  background: rgba(4, 10, 8, 0.34);
+}
+
+.insider-detail h3 {
+  margin: 0 0 12px;
+  font-family: "Space Mono", monospace;
+  font-size: 0.95rem;
+  color: #f3bc55;
+  text-transform: uppercase;
+}
+
+.insider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 9px;
+}
+
+.insider-list li {
+  position: relative;
+  padding-left: 16px;
+  color: #dfe9e2;
+  line-height: 1.45;
+}
+
+.insider-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #7cffd0;
+  box-shadow: 0 0 10px rgba(124, 255, 208, 0.42);
+}
+
+.insider-empty,
+.insider-error {
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(236, 111, 79, 0.3);
+  background: rgba(38, 12, 10, 0.54);
+  color: #ffcbc0;
+}
+
+@media (max-width: 960px) {
+  .insider-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .insider-sidebar {
+    position: static;
+  }
+
+  .insider-section-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .insider-shell {
+    padding: 16px 14px 28px;
+  }
+
+  .insider-hero {
+    padding: 20px;
+  }
+
+  .insider-highlight-row {
+    grid-template-columns: 1fr;
+  }
+
+  .insider-title {
+    max-width: 100%;
+  }
+}
