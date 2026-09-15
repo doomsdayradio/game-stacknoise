@@ -1,14 +1,36 @@
-# game-stacknoise
+# Stack Noise
 
-This repository is part of the Doomsday Radio multi-repo migration.
+Interaktiver Doomsday-Radio-Empfänger für den Browser. Spielende stimmen
+Frequenz, Phase, Verstärkung und Farbkanäle ab und umgehen später die
+Stack-Störung über ein Patchfeld. Jede gelöste Stufe legt weitere Teile der
+Übertragung frei.
 
-## Purpose
-Signal decoder / stack-noise game implementation and related artifacts.
+## Lokal starten
 
-## Source relationship
-This repo is intentionally separated from the monorepo so it can be built, tested, and deployed independently.
+```bash
+python -m http.server 8000
+```
 
-## Notes
-- Keep product logic, tests, and deployment config in this repo.
-- Prefer stable public URLs or versioned contracts over relative cross-repo links.
-- Only radio-specific assets belong in Bunny Storage; non-radio assets may remain in the repo.
+Danach kann das Spiel unter <http://localhost:8000> geöffnet werden. Der
+Webserver ist nötig, weil die Anwendung JavaScript-Module und lokale Daten
+nachlädt.
+
+## Bedienung und Zustand
+
+- Die integrierte Hilfe und das Tutorial erklären die Regler stufenweise.
+- Deutsch und Englisch sind über die Sprachauswahl verfügbar.
+- Audio wird erst nach einer Nutzeraktion aktiviert.
+- Der Spielfortschritt bleibt im lokalen Browser-Speicher erhalten und kann
+	über **Reset** gelöscht werden.
+
+## Projektstruktur
+
+```text
+index.html   Oberfläche und Dialoge
+css/         Layout und Darstellung
+js/          Spiellogik, Signalmodell, Audio und Übersetzungen
+audio/       lokale Audioelemente
+```
+
+Die Anwendung benötigt keinen Build-Schritt und hat derzeit keine eigene
+Deployment-Automation in diesem Repository.
